@@ -25,12 +25,22 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold mb-6 leading-tight">
-            IVOIRE RIZ
-          </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl font-montserrat font-light mb-4 text-secondary-light">
-            Le goût de l'excellence ivoirienne
-          </p>
+          <div className="animate-fade-in">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-montserrat font-black mb-6 leading-tight bg-gradient-vivid bg-clip-text text-transparent animate-pulse">
+              IVOIRE RIZ
+            </h1>
+            <div className="relative mb-6">
+              <p className="text-2xl md:text-4xl lg:text-5xl font-montserrat font-bold text-white drop-shadow-lg">
+                RIZ LOCAL
+              </p>
+              <p className="text-lg md:text-2xl lg:text-3xl font-montserrat font-semibold text-accent-light">
+                PRODUIT EN CÔTE D'IVOIRE
+              </p>
+              <p className="text-xl md:text-3xl lg:text-4xl font-montserrat font-bold text-secondary animate-bounce">
+                QUALITÉ SUPÉRIEURE
+              </p>
+            </div>
+          </div>
           
           {/* Subtitle */}
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white/90 leading-relaxed">

@@ -8,48 +8,41 @@ const Products = () => {
   const products = [
     {
       id: 1,
-      name: "Riz Blanc Premium",
-      description: "Notre riz blanc de qualité supérieure, parfait pour tous vos plats quotidiens. Grains longs et savoureux.",
+      name: "JT 11 - Riz Parfumé",
+      description: "Notre riz parfumé JT 11 aux arômes authentiques ivoiriens. Grains longs et savoureux pour une expérience culinaire exceptionnelle.",
       image: riceProducts,
-      formats: ["5kg", "10kg", "25kg"],
-      category: "Premium",
-      features: ["Grains longs", "Texture parfaite", "Goût authentique"]
+      formats: ["5kg", "10kg", "25kg", "50kg"],
+      category: "Parfumé",
+      color: "bg-primary text-white",
+      features: ["Arôme délicat", "Grains longs", "Qualité premium", "100% ivoirien"]
     },
     {
       id: 2,
-      name: "Riz Étuvé Traditionnel",
-      description: "Riz étuvé selon les méthodes traditionnelles ivoiriennes, conservant tous les nutriments et le goût unique.",
+      name: "CB ONE - Riz Diététique",
+      description: "Riz diététique CB ONE spécialement sélectionné pour ses qualités nutritionnelles. Idéal pour une alimentation saine et équilibrée.",
       image: riceProducts,
       formats: ["5kg", "10kg", "25kg"],
-      category: "Traditionnel",
-      features: ["Riche en nutriments", "Méthode traditionnelle", "Cuisson rapide"]
+      category: "Diététique",
+      color: "bg-muted text-foreground border-2 border-primary",
+      features: ["Faible en gras", "Riche en fibres", "Cuisson rapide", "Nutrition optimale"]
     },
     {
       id: 3,
-      name: "Riz Parfumé Jasmin",
-      description: "Variété parfumée aux arômes délicats, idéale pour les occasions spéciales et la gastronomie raffinée.",
-      image: riceProducts,
-      formats: ["5kg", "10kg", "25kg"],
-      category: "Gourmet",
-      features: ["Arôme délicat", "Grains fins", "Qualité gourmet"]
-    },
-    {
-      id: 4,
-      name: "Riz Brisé Économique",
-      description: "Option économique sans compromis sur la qualité, parfait pour les familles et les collectivités.",
+      name: "Riz Étuvé",
+      description: "Riz étuvé selon les méthodes traditionnelles ivoiriennes, conservant tous les nutriments et le goût authentique local.",
       image: riceProducts,
       formats: ["5kg", "10kg", "25kg", "50kg"],
-      category: "Économique",
-      features: ["Rapport qualité-prix", "Grande quantité", "Nutritif"]
+      category: "Étuvé",
+      color: "bg-accent text-white",
+      features: ["Méthode traditionnelle", "Riche en nutriments", "Goût authentique", "Cuisson parfaite"]
     }
   ];
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case "Premium": return "bg-gradient-gold text-secondary-foreground";
-      case "Traditionnel": return "bg-gradient-primary text-white";
-      case "Gourmet": return "bg-secondary-dark text-white";
-      case "Économique": return "bg-accent text-white";
+      case "Parfumé": return "bg-primary text-white shadow-lg";
+      case "Diététique": return "bg-gray-100 text-primary border-2 border-primary";
+      case "Étuvé": return "bg-accent text-white shadow-lg";
       default: return "bg-muted text-muted-foreground";
     }
   };
@@ -58,30 +51,38 @@ const Products = () => {
     <section id="produits" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-primary mb-4">
-            Nos Produits
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-montserrat font-black text-primary mb-6">
+            Les Différentes Qualités de Riz
           </h2>
-          <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Découvrez notre gamme complète de riz de qualité premium, 
-            adaptée à tous les goûts et tous les budgets.
+          <p className="text-2xl md:text-3xl font-montserrat font-bold text-accent mb-4">
+            À Votre Disposition
+          </p>
+          <div className="w-32 h-2 bg-gradient-vivid mx-auto mb-8 rounded-full"></div>
+          <p className="text-xl text-primary-dark max-w-4xl mx-auto leading-relaxed font-semibold">
+            Vous pensez au <span className="text-accent font-bold">vrai riz local</span>, 
+            contactez <span className="text-primary font-black">IVOIRE RIZ</span> pour vous satisfaire
           </p>
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
-          {products.map((product) => (
-            <Card key={product.id} className="overflow-hidden hover:shadow-premium transition-all duration-300 group border-0 bg-white">
+        <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8 mb-12">
+          {products.map((product, index) => (
+            <Card key={product.id} className={`overflow-hidden hover:shadow-vivid transition-all duration-500 group border-0 bg-white hover:scale-105 animate-fade-in`} 
+                  style={{animationDelay: `${index * 0.2}s`}}>
               <div className="relative">
+                <div className="absolute inset-0 bg-gradient-vivid opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <Badge className={`absolute top-4 left-4 ${getCategoryColor(product.category)} font-semibold`}>
+                <div className={`absolute top-4 left-4 ${product.color} px-6 py-3 rounded-full font-bold text-lg transform group-hover:scale-110 transition-all duration-300 shadow-lg`}>
                   {product.category}
-                </Badge>
+                </div>
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                  <span className="text-sm font-bold text-primary">100% Local</span>
+                </div>
               </div>
               
               <CardContent className="p-6">

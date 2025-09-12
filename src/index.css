@@ -17,21 +17,23 @@
     --popover: 0 0% 100%;
     --popover-foreground: 120 25% 15%;
 
-    /* Primary - Rice field green */
-    --primary: 120 45% 25%;
+    /* Primary - IVOIRE RIZ Authentic Green */
+    --primary: 142 76% 36%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 120 35% 45%;
-    --primary-dark: 120 55% 15%;
+    --primary-light: 142 45% 75%;
+    --primary-dark: 142 100% 20%;
+    --primary-vivid: 120 100% 25%;
 
-    /* Secondary - Premium gold */
-    --secondary: 45 85% 55%;
-    --secondary-foreground: 120 25% 15%;
-    --secondary-light: 45 90% 70%;
-    --secondary-dark: 45 75% 35%;
+    /* Secondary - Premium Gold from prospectus */
+    --secondary: 45 100% 51%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --secondary-light: 45 100% 70%;
+    --secondary-dark: 38 92% 50%;
 
-    /* Accent - Natural green */
-    --accent: 110 40% 35%;
+    /* Accent - Orange from prospectus */
+    --accent: 24 100% 50%;
     --accent-foreground: 0 0% 100%;
+    --accent-light: 24 100% 70%;
 
     /* Muted - Soft earth tones */
     --muted: 45 20% 92%;
@@ -46,16 +48,20 @@
     --input: 120 20% 85%;
     --ring: 120 45% 25%;
 
-    /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
+    /* Authentic IVOIRE RIZ gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-dark)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)) 0%, hsl(var(--primary)) 50%, hsl(var(--accent)) 100%);
     --gradient-nature: linear-gradient(180deg, hsl(var(--primary-light) / 0.1) 0%, hsl(var(--accent) / 0.05) 100%);
+    --gradient-vivid: linear-gradient(45deg, hsl(var(--primary-vivid)), hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-premium: linear-gradient(135deg, hsl(var(--secondary-dark)), hsl(var(--secondary)), hsl(var(--accent)));
 
-    /* Shadows */
-    --shadow-premium: 0 10px 40px -10px hsl(var(--primary) / 0.2);
-    --shadow-gold: 0 8px 30px -8px hsl(var(--secondary) / 0.3);
-    --shadow-subtle: 0 4px 20px -4px hsl(var(--primary) / 0.1);
+    /* Spectacular Shadows */
+    --shadow-premium: 0 25px 50px -12px hsl(var(--primary) / 0.4);
+    --shadow-gold: 0 20px 40px -10px hsl(var(--secondary) / 0.4);
+    --shadow-subtle: 0 10px 30px -10px hsl(var(--primary) / 0.15);
+    --shadow-vivid: 0 30px 60px -15px hsl(var(--primary-vivid) / 0.3);
+    --shadow-glow: 0 0 60px hsl(var(--primary) / 0.2);
 
     /* Radius */
     --radius: 0.75rem;

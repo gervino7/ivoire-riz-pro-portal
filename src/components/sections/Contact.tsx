@@ -53,8 +53,8 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      title: "Téléphone",
-      details: ["+225 27 22 XX XX XX", "+225 05 XX XX XX XX"],
+      title: "Nos Lignes Directes",
+      details: ["07 49 81 01 93", "07 87 01 39 4", "07 09 04 21 71"],
       color: "text-secondary"
     },
     {
