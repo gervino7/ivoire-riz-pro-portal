@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Heart, Shield, Leaf, Handshake, Star, Award } from 'lucide-react';
+import { handleNavClick } from '@/utils/smoothScroll';
 
 const About = () => {
   const values = [
@@ -142,10 +143,10 @@ const About = () => {
               <span className="text-secondary-light font-bold">Ensemble, cultivons l'excellence !</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-secondary hover:text-white font-bold text-lg px-8 py-4 shadow-vivid transform hover:scale-105 transition-all duration-300">
+              <Button size="lg" className="bg-white text-primary hover:bg-secondary hover:text-white font-bold text-lg px-8 py-4 shadow-vivid transform hover:scale-105 transition-all duration-300" onClick={(e) => handleNavClick(e, '#contact')}>
                 Devenir Partenaire
               </Button>
-              <Button size="lg" variant="outline" className="border-white/50 text-white hover:bg-white/20 hover:border-white font-bold text-lg px-8 py-4 backdrop-blur-sm">
+              <Button size="lg" variant="outline" className="border-white/50 text-white hover:bg-white/20 hover:border-white font-bold text-lg px-8 py-4 backdrop-blur-sm" onClick={(e) => handleNavClick(e, '#témoignages')}>
                 Nos Références
               </Button>
             </div>

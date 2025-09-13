@@ -2,6 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, ArrowRight, Newspaper } from 'lucide-react';
+import { handleNavClick } from '@/utils/smoothScroll';
 
 const News = () => {
   const articles = [
@@ -139,7 +140,7 @@ const News = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark text-white font-semibold">
+          <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark text-white font-semibold" onClick={(e) => handleNavClick(e, '#actualites')}>
             Voir toutes les actualités
           </Button>
         </div>

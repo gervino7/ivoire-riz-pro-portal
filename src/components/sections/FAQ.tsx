@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Sparkles, Star, Building, Package, Award, MapPin, Phone } from 'lucide-react';
+import { handleNavClick } from '@/utils/smoothScroll';
 
 const FAQ = () => {
   const [openItem, setOpenItem] = useState<number | null>(0);
@@ -170,6 +171,7 @@ const FAQ = () => {
                   <Button 
                     size="lg" 
                     className="group relative bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white font-bold px-8 py-4 text-lg shadow-glow hover:shadow-elegant transform hover:scale-105 transition-all duration-300 overflow-hidden"
+                    onClick={(e) => handleNavClick(e, '#contact')}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
                     <span className="relative">Nous contacter</span>
@@ -179,6 +181,7 @@ const FAQ = () => {
                     size="lg" 
                     variant="outline" 
                     className="group relative border-2 border-primary text-primary hover:text-white font-bold px-8 py-4 text-lg hover:bg-gradient-to-r hover:from-primary hover:to-primary-dark transform hover:scale-105 transition-all duration-300 overflow-hidden"
+                    onClick={() => window.open('tel:+2250506803113', '_self')}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
                     <span className="relative">Demander un rappel</span>

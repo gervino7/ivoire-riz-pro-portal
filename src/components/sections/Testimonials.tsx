@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
+import { handleNavClick } from '@/utils/smoothScroll';
 
 const Testimonials = () => {
   const testimonials = [
@@ -147,10 +148,15 @@ const Testimonials = () => {
             Contactez-nous pour devenir notre prochain partenaire satisfait !
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-primary hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200">
+            <button className="bg-gradient-primary hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200" onClick={() => {
+              const phoneNumber = '2250506803113';
+              const message = "Bonjour, je souhaite demander un échantillon de vos produits IVOIRE RIZ.";
+              const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+              window.open(whatsappUrl, '_blank');
+            }}>
               Demander un échantillon
             </button>
-            <button className="border border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200">
+            <button className="border border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200" onClick={(e) => handleNavClick(e, '#contact')}>
               Devenir partenaire
             </button>
           </div>
