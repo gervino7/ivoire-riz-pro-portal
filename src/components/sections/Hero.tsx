@@ -10,7 +10,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="accueil" className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-0">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
           
           {/* Subtitle */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto text-white subpixel-antialiased leading-relaxed px-4 sm:px-2 drop-shadow-md">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto text-white antialiased leading-relaxed px-4 sm:px-2">
             Depuis 15 ans, nous cultivons et transformons le meilleur riz de Côte d'Ivoire 
             pour offrir à nos clients des produits de qualité premium.
           </p>
@@ -60,7 +60,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 hover:border-white font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 backdrop-blur-sm"
+                className="w-full sm:w-auto bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 backdrop-blur-sm"
               >
                 Notre histoire
               </Button>
