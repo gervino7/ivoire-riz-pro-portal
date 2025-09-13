@@ -22,7 +22,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 sm:px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Main Headline */}
           <div className="animate-fade-in">
@@ -43,13 +43,13 @@ const Hero = () => {
           </div>
           
           {/* Subtitle */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto text-white subpixel-antialiased leading-relaxed px-2 drop-shadow-md">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto text-white subpixel-antialiased leading-relaxed px-4 sm:px-2 drop-shadow-md">
             Depuis 15 ans, nous cultivons et transformons le meilleur riz de Côte d'Ivoire 
             pour offrir à nos clients des produits de qualité premium.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 px-2">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 px-4 sm:px-2">
             <a href="#produits">
               <Button size="lg" className="w-full sm:w-auto bg-gradient-gold hover:bg-secondary-dark text-secondary-foreground font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-gold">
                 Découvrir nos produits
