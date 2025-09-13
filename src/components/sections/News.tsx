@@ -106,10 +106,10 @@ const News = () => {
                   </Button>
                 </div>
               </div>
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden h-full">
                 {articles[0].image ? (
-                  <div className="relative h-48 lg:h-64">
-                    <img
+                  <div className="relative h-full">
+                    <img 
                       src={articles[0].image} 
                       alt={articles[0].title}
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
@@ -117,7 +117,7 @@ const News = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
                   </div>
                 ) : (
-                  <div className="bg-primary/5 flex items-center justify-center p-8 h-80 lg:h-full">
+                  <div className="bg-primary/5 flex items-center justify-center p-8 h-full">
                     <Newspaper className="h-32 w-32 text-primary/20" />
                   </div>
                 )}
