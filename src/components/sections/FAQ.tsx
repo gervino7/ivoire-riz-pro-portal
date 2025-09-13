@@ -8,36 +8,24 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "Où puis-je trouver les produits IVOIRE RIZ ?",
-      answer: "Nos produits sont disponibles dans plus de 500 points de vente à travers la Côte d'Ivoire, incluant les grandes surfaces, marchés locaux, et épiceries. Vous pouvez également nous contacter directement pour connaître le distributeur le plus proche de chez vous ou pour des commandes en gros."
+      question: "Qui est IVOIRE RIZ ?",
+      answer: "IVOIRE RIZ est une entreprise ivoirienne spécialisée dans la production, la transformation et la distribution de riz local. Basée à Abidjan, notre mission est de garantir un riz de qualité, sain et accessible, tout en soutenant la filière rizicole nationale et les producteurs locaux."
     },
     {
-      question: "Comment devenir partenaire distributeur d'IVOIRE RIZ ?",
-      answer: "Pour devenir partenaire distributeur, vous devez remplir notre formulaire de candidature en ligne ou nous contacter directement. Nous évaluerons votre dossier en fonction de votre zone géographique, votre expérience dans la distribution alimentaire, et votre capacité de stockage. Un représentant commercial vous contactera pour discuter des modalités de partenariat."
+      question: "Quels produits proposez-vous ?",
+      answer: "Nous proposons plusieurs gammes adaptées aux besoins des consommateurs et des distributeurs : Riz blanc, Riz étuvé, Riz parfumé, et Riz brisé. Tous nos produits sont disponibles en différents formats (5kg, 10kg, 25kg) pour les ménages comme pour les grandes surfaces et grossistes."
     },
     {
-      question: "Quelles sont les certifications qualité de vos produits ?",
-      answer: "Tous nos produits sont certifiés ISO 22000 pour la sécurité alimentaire. Nous respectons également les normes HACCP et possédons les certifications locales requises par l'ANSSA (Agence Nationale de Sécurité Sanitaire des Aliments). Notre nouvelle gamme biologique est certifiée par Ecocert."
+      question: "Pourquoi choisir IVOIRE RIZ ?",
+      answer: "Nos produits répondent aux normes de qualité les plus strictes, avec une traçabilité garantie et un processus de transformation moderne. Nous privilégions l'approvisionnement local pour soutenir les riziculteurs ivoiriens, et contribuons à la sécurité alimentaire nationale. IVOIRE RIZ, c'est le goût, la qualité et la fierté ivoirienne."
     },
     {
-      question: "Proposez-vous des conditionnements personnalisés ?",
-      answer: "Oui, nous proposons des conditionnements sur mesure pour les professionnels, collectivités, et gros distributeurs. Les formats peuvent aller de 1kg à 50kg selon vos besoins. Contactez notre équipe commerciale pour discuter de vos besoins spécifiques et obtenir un devis personnalisé."
+      question: "Où trouver vos produits ? Comment devenir partenaire ?",
+      answer: "Nos produits sont disponibles dans les supermarchés, points de vente agréés et chez nos distributeurs. Vous souhaitez devenir partenaire ou distributeur ? Contactez-nous via notre formulaire en ligne ou par téléphone au +225 05 06 80 31 13 pour recevoir plus d'informations sur nos modalités de partenariat."
     },
     {
-      question: "Quelle est la durée de conservation de vos produits ?",
-      answer: "La durée de conservation varie selon le type de riz : 24 mois pour le riz blanc et parfumé, 18 mois pour le riz étuvé, dans des conditions de stockage optimales (endroit sec, frais, à l'abri de la lumière). La date limite de consommation optimale est indiquée sur chaque emballage."
-    },
-    {
-      question: "Livrez-vous dans toute la Côte d'Ivoire ?",
-      answer: "Oui, nous assurons la livraison dans toute la Côte d'Ivoire grâce à notre réseau logistique national. Pour les commandes importantes (plus de 1 tonne), nous proposons également la livraison dans les pays limitrophes. Les délais et tarifs de livraison varient selon la destination et la quantité commandée."
-    },
-    {
-      question: "Comment garantissez-vous la fraîcheur de vos produits ?",
-      answer: "Nous appliquons la méthode FIFO (First In, First Out) dans nos entrepôts, contrôlons régulièrement la température et l'humidité de stockage, et effectuons des tests qualité à chaque étape de la production. Notre chaîne d'approvisionnement est optimisée pour réduire les délais entre la production et la mise sur le marché."
-    },
-    {
-      question: "Soutenez-vous les producteurs locaux ?",
-      answer: "Absolument ! Nous travaillons directement avec plus de 200 riziculteurs ivoiriens dans le cadre de partenariats équitables. Nous leur fournissons un soutien technique, des formations sur les bonnes pratiques agricoles, et nous leur garantissons l'achat de leur production à des prix rémunérateurs fixés à l'avance."
+      question: "Comment vous contacter ?",
+      answer: "Vous pouvez nous joindre facilement : Par téléphone : +225 05 06 80 31 13, Par email : contact@ivoireriz.ci, Via notre formulaire de contact sur le site, ou en visitant notre siège social à Abidjan, Côte d'Ivoire. Une carte Google Maps est intégrée pour faciliter votre visite."
     }
   ];
 
@@ -102,11 +90,11 @@ const FAQ = () => {
           <div className="text-center bg-gradient-nature rounded-2xl p-8">
             <MessageCircle className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-montserrat font-semibold text-primary mb-4">
-              Vous ne trouvez pas la réponse à votre question ?
+              Vous avez une autre question ?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Notre équipe est à votre disposition pour répondre à toutes vos questions 
-              et vous accompagner dans vos projets. N'hésitez pas à nous contacter !
+              Contactez-nous dès aujourd'hui ! Notre équipe est à votre disposition pour répondre 
+              à toutes vos questions et vous accompagner dans vos projets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark text-white font-semibold">
