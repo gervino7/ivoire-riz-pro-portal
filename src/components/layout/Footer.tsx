@@ -31,7 +31,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "#", color: "hover:text-blue-600" },
+    { name: "Facebook", icon: Facebook, href: "https://web.facebook.com/ivoire.riz", color: "hover:text-blue-600" },
     { name: "LinkedIn", icon: Linkedin, href: "#", color: "hover:text-blue-700" },
     { name: "Instagram", icon: Instagram, href: "#", color: "hover:text-pink-600" }
   ];

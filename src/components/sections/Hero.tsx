@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import WhatsAppButton from '@/components/ui/whatsapp-button';
 import { ArrowRight, Award, Users, Truck } from 'lucide-react';
 import heroImage from '@/assets/hero-rice-fields.jpg';
 
@@ -93,6 +94,9 @@ const Hero = () => {
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
+      
+      {/* Bouton WhatsApp flottant */}
+      <WhatsAppButton variant="floating" />
     </section>
   );
 };
