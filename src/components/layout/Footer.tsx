@@ -141,13 +141,13 @@ const Footer = () => {
             <p className="text-white/70 text-sm mb-4">
               Abonnez-vous à notre newsletter pour recevoir nos dernières actualités et offres spéciales.
             </p>
-            <div className="flex space-x-2">
+            <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 placeholder="Votre adresse email"
-                className="flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-secondary"
+                className="w-full sm:flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-secondary"
               />
-              <button className="px-6 py-2 bg-gradient-gold hover:bg-secondary-dark text-secondary-foreground font-semibold rounded-lg transition-colors duration-200">
+              <button className="w-full sm:w-auto px-6 py-2 bg-gradient-gold hover:bg-secondary-dark text-secondary-foreground font-semibold rounded-lg transition-colors duration-200">
                 S'abonner
               </button>
             </div>
