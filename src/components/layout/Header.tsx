@@ -21,7 +21,7 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3 group cursor-pointer">
+          <a href="#accueil" className="flex items-center space-x-3 group cursor-pointer">
             <div className="relative w-12 h-12 md:w-14 md:h-14 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
               <img 
                 src={logoImage} 
@@ -38,7 +38,7 @@ const Header = () => {
                 QUALITÉ SUPÉRIEURE
               </span>
             </div>
-          </div>
+          </a>
 
           {/* Navigation Desktop */}
           <nav className="hidden lg:flex items-center space-x-1">
@@ -58,11 +58,13 @@ const Header = () => {
 
           {/* CTA Button Desktop */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button className="relative overflow-hidden bg-gradient-gold hover:bg-gradient-premium text-secondary-foreground font-semibold shadow-gold hover:shadow-vivid transition-all duration-500 group px-6 py-3 rounded-xl">
-              <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">Nos Produits</span>
-              <div className="absolute inset-0 bg-gradient-vivid opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute -inset-1 bg-gradient-premium opacity-0 group-hover:opacity-30 blur-sm transition-all duration-500"></div>
-            </Button>
+            <a href="#produits">
+              <Button className="relative overflow-hidden bg-gradient-gold hover:bg-gradient-premium text-secondary-foreground font-semibold shadow-gold hover:shadow-vivid transition-all duration-500 group px-6 py-3 rounded-xl">
+                <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">Nos Produits</span>
+                <div className="absolute inset-0 bg-gradient-vivid opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -inset-1 bg-gradient-premium opacity-0 group-hover:opacity-30 blur-sm transition-all duration-500"></div>
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,10 +101,12 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-2 pt-6">
-                <Button className="w-full relative overflow-hidden bg-gradient-gold hover:bg-gradient-premium text-secondary-foreground font-semibold shadow-gold hover:shadow-vivid transition-all duration-500 group py-4 rounded-xl">
-                  <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">Nos Produits</span>
-                  <div className="absolute inset-0 bg-gradient-vivid opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </Button>
+                <a href="#produits" className="block">
+                  <Button className="w-full relative overflow-hidden bg-gradient-gold hover:bg-gradient-premium text-secondary-foreground font-semibold shadow-gold hover:shadow-vivid transition-all duration-500 group py-4 rounded-xl">
+                    <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">Nos Produits</span>
+                    <div className="absolute inset-0 bg-gradient-vivid opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </Button>
+                </a>
               </div>
             </nav>
           </div>
