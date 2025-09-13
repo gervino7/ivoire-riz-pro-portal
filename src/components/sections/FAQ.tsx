@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Sparkles, Star } from 'lucide-react';
+import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Sparkles, Star, Building, Package, Award, MapPin, Phone } from 'lucide-react';
 
 const FAQ = () => {
   const [openItem, setOpenItem] = useState<number | null>(0);
@@ -9,23 +9,28 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Qui est IVOIRE RIZ ?",
-      answer: "IVOIRE RIZ est une entreprise ivoirienne spécialisée dans la production, la transformation et la distribution de riz local. Basée à Abidjan, notre mission est de garantir un riz de qualité, sain et accessible, tout en soutenant la filière rizicole nationale et les producteurs locaux."
+      answer: "IVOIRE RIZ est une entreprise ivoirienne spécialisée dans la production, la transformation et la distribution de riz local. Basée à Abidjan, notre mission est de garantir un riz de qualité, sain et accessible, tout en soutenant la filière rizicole nationale et les producteurs locaux.",
+      icon: Building
     },
     {
       question: "Quels produits proposez-vous ?",
-      answer: "Nous proposons plusieurs gammes adaptées aux besoins des consommateurs et des distributeurs : Riz blanc, Riz étuvé, Riz parfumé, et Riz brisé. Tous nos produits sont disponibles en différents formats (5kg, 10kg, 25kg) pour les ménages comme pour les grandes surfaces et grossistes."
+      answer: "Nous proposons plusieurs gammes adaptées aux besoins des consommateurs et des distributeurs : Riz blanc, Riz étuvé, Riz parfumé, et Riz brisé. Tous nos produits sont disponibles en différents formats (5kg, 10kg, 25kg) pour les ménages comme pour les grandes surfaces et grossistes.",
+      icon: Package
     },
     {
       question: "Pourquoi choisir IVOIRE RIZ ?",
-      answer: "Nos produits répondent aux normes de qualité les plus strictes, avec une traçabilité garantie et un processus de transformation moderne. Nous privilégions l'approvisionnement local pour soutenir les riziculteurs ivoiriens, et contribuons à la sécurité alimentaire nationale. IVOIRE RIZ, c'est le goût, la qualité et la fierté ivoirienne."
+      answer: "Nos produits répondent aux normes de qualité les plus strictes, avec une traçabilité garantie et un processus de transformation moderne. Nous privilégions l'approvisionnement local pour soutenir les riziculteurs ivoiriens, et contribuons à la sécurité alimentaire nationale. IVOIRE RIZ, c'est le goût, la qualité et la fierté ivoirienne.",
+      icon: Award
     },
     {
       question: "Où trouver vos produits ? Comment devenir partenaire ?",
-      answer: "Nos produits sont disponibles dans les supermarchés, points de vente agréés et chez nos distributeurs. Vous souhaitez devenir partenaire ou distributeur ? Contactez-nous via notre formulaire en ligne ou par téléphone au +225 05 06 80 31 13 pour recevoir plus d'informations sur nos modalités de partenariat."
+      answer: "Nos produits sont disponibles dans les supermarchés, points de vente agréés et chez nos distributeurs. Vous souhaitez devenir partenaire ou distributeur ? Contactez-nous via notre formulaire en ligne ou par téléphone au +225 05 06 80 31 13 pour recevoir plus d'informations sur nos modalités de partenariat.",
+      icon: MapPin
     },
     {
       question: "Comment vous contacter ?",
-      answer: "Vous pouvez nous joindre facilement : Par téléphone : +225 05 06 80 31 13, Par email : contact@ivoireriz.ci, Via notre formulaire de contact sur le site, ou en visitant notre siège social à Abidjan, Côte d'Ivoire. Une carte Google Maps est intégrée pour faciliter votre visite."
+      answer: "Vous pouvez nous joindre facilement : Par téléphone : +225 05 06 80 31 13, Par email : contact@ivoireriz.ci, Via notre formulaire de contact sur le site, ou en visitant notre siège social à Abidjan, Côte d'Ivoire. Une carte Google Maps est intégrée pour faciliter votre visite.",
+      icon: Phone
     }
   ];
 
@@ -88,7 +93,7 @@ const FAQ = () => {
                         <div className="relative">
                           <div className="absolute inset-0 bg-primary/20 rounded-full blur-md group-hover:animate-pulse"></div>
                           <div className="relative bg-gradient-to-br from-primary to-primary-dark p-3 rounded-full shadow-elegant">
-                            <HelpCircle className="h-6 w-6 text-white" />
+                            <faq.icon className="h-6 w-6 text-white" />
                           </div>
                         </div>
                         <div className="flex-1">
