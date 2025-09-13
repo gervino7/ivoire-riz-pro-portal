@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import WhatsAppButton from '@/components/ui/whatsapp-button';
 import { ArrowRight, Award, Users, Truck } from 'lucide-react';
 import heroImage from '@/assets/hero-rice-fields.jpg';
+import { handleNavClick } from '@/utils/smoothScroll';
 
 const Hero = () => {
   const stats = [
@@ -51,13 +52,19 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 px-4 sm:px-2">
-            <a href="#produits">
+            <a 
+              href="#produits"
+              onClick={(e) => handleNavClick(e, '#produits')}
+            >
               <Button size="lg" className="w-full sm:w-auto bg-gradient-gold hover:bg-secondary-dark text-secondary-foreground font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-gold">
                 Découvrir nos produits
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </a>
-            <a href="#apropos">
+            <a 
+              href="#apropos"
+              onClick={(e) => handleNavClick(e, '#apropos')}
+            >
               <Button 
                 size="lg" 
                 variant="outline" 

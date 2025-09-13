@@ -138,7 +138,13 @@ const Contact = () => {
                 Située au cœur de la zone industrielle d'Abidjan, 
                 notre entreprise est facilement accessible.
               </p>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+              <Button 
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary hover:text-white"
+                onClick={() => {
+                  window.open('https://maps.google.com/?q=Abidjan+Zone+Industrielle+Yopougon+Côte+d\'Ivoire', '_blank');
+                }}
+              >
                 Voir sur Google Maps
               </Button>
             </div>
@@ -266,13 +272,27 @@ const Contact = () => {
             Notre équipe commerciale est disponible du lundi au vendredi.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:border-white">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-white/30 text-white hover:bg-white/10 hover:border-white"
+              onClick={() => {
+                window.open('tel:+2250506803113', '_self');
+              }}
+            >
               <Phone className="mr-2 h-5 w-5" />
-              +225 27 22 XX XX XX
+              +225 05 06 80 31 13
             </Button>
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:border-white">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-white/30 text-white hover:bg-white/10 hover:border-white"
+              onClick={() => {
+                window.open('mailto:inddger7@gmail.com', '_self');
+              }}
+            >
               <Mail className="mr-2 h-5 w-5" />
-              commercial@ivoireriz.ci
+              inddger7@gmail.com
             </Button>
             <WhatsAppButton 
               text="WhatsApp Commercial" 

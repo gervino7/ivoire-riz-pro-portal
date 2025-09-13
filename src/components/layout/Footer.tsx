@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { handleNavClick } from '@/utils/smoothScroll';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -67,11 +68,21 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-secondary flex-shrink-0" />
-                <span className="text-white/80 text-sm">+225 27 22 XX XX XX</span>
+                <a 
+                  href="tel:+2250506803113" 
+                  className="text-white/80 text-sm hover:text-secondary transition-colors cursor-pointer"
+                >
+                  +225 05 06 80 31 13
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-secondary flex-shrink-0" />
-                <span className="text-white/80 text-sm">contact@ivoireriz.ci</span>
+                <a 
+                  href="mailto:inddger7@gmail.com" 
+                  className="text-white/80 text-sm hover:text-secondary transition-colors cursor-pointer"
+                >
+                  inddger7@gmail.com
+                </a>
               </div>
             </div>
           </div>
@@ -86,7 +97,8 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-white/70 hover:text-secondary transition-colors duration-200 text-sm"
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="text-white/70 hover:text-secondary transition-colors duration-200 text-sm cursor-pointer"
                   >
                     {link.name}
                   </a>
@@ -104,7 +116,8 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-white/70 hover:text-secondary transition-colors duration-200 text-sm"
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="text-white/70 hover:text-secondary transition-colors duration-200 text-sm cursor-pointer"
                   >
                     {link.name}
                   </a>
@@ -122,7 +135,8 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-white/70 hover:text-secondary transition-colors duration-200 text-sm"
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="text-white/70 hover:text-secondary transition-colors duration-200 text-sm cursor-pointer"
                   >
                     {link.name}
                   </a>
@@ -147,7 +161,18 @@ const Footer = () => {
                 placeholder="Votre adresse email"
                 className="w-full sm:flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-secondary"
               />
-              <button className="w-full sm:w-auto px-6 py-2 bg-gradient-gold hover:bg-secondary-dark text-secondary-foreground font-semibold rounded-lg transition-colors duration-200">
+              <button 
+                type="button"
+                onClick={() => {
+                  const email = (document.querySelector('input[type="email"]') as HTMLInputElement)?.value;
+                  if (email) {
+                    alert('Merci pour votre inscription ! Vous recevrez bientôt nos dernières actualités.');
+                  } else {
+                    alert('Veuillez saisir une adresse email valide.');
+                  }
+                }}
+                className="w-full sm:w-auto px-6 py-2 bg-gradient-gold hover:bg-secondary-dark text-secondary-foreground font-semibold rounded-lg transition-colors duration-200"
+              >
                 S'abonner
               </button>
             </div>
@@ -166,13 +191,34 @@ const Footer = () => {
 
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-white/60 hover:text-secondary transition-colors duration-200">
+              <a 
+                href="#" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  alert('Page en construction. Veuillez nous contacter pour plus d\'informations.');
+                }}
+                className="text-white/60 hover:text-secondary transition-colors duration-200 cursor-pointer"
+              >
                 Mentions légales
               </a>
-              <a href="#" className="text-white/60 hover:text-secondary transition-colors duration-200">
+              <a 
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  alert('Page en construction. Veuillez nous contacter pour plus d\'informations.');
+                }}
+                className="text-white/60 hover:text-secondary transition-colors duration-200 cursor-pointer"
+              >
                 Politique de confidentialité
               </a>
-              <a href="#" className="text-white/60 hover:text-secondary transition-colors duration-200">
+              <a 
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  alert('Page en construction. Veuillez nous contacter pour plus d\'informations.');
+                }}
+                className="text-white/60 hover:text-secondary transition-colors duration-200 cursor-pointer"
+              >
                 CGV
               </a>
             </div>
@@ -183,7 +229,8 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center ${social.color} transition-colors duration-200`}
+                  onClick={(e) => handleNavClick(e, social.href)}
+                  className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center ${social.color} transition-colors duration-200 cursor-pointer`}
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />
