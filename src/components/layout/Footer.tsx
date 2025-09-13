@@ -63,7 +63,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-secondary flex-shrink-0" />
                 <span className="text-white/80 text-sm">
-                  Abidjan, Zone Industrielle de Yopougon, Côte d'Ivoire
+                  Abidjan, Yopougon, Côte d'Ivoire
                 </span>
               </div>
               <div className="flex items-center space-x-3">
