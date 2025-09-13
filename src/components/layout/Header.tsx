@@ -51,7 +51,7 @@ const Header = () => {
               >
                 <span className="relative z-10">{item.name}</span>
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
-                <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-gold group-hover:w-3/4 group-hover:left-1/8 transition-all duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-gold group-hover:w-full transition-all duration-300 z-0"></div>
               </a>
             ))}
           </nav>
@@ -97,7 +97,7 @@ const Header = () => {
                 >
                   <span className="relative z-10">{item.name}</span>
                   <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-15 transition-opacity duration-300 rounded-lg"></div>
-                  <div className="absolute left-3 top-1/2 w-0 h-0.5 bg-gradient-gold group-hover:w-6 transition-all duration-300 transform -translate-y-1/2"></div>
+                  <div className="absolute left-4 right-4 bottom-2 h-0.5 bg-gradient-gold transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-0"></div>
                 </a>
               ))}
               <div className="px-2 pt-4">

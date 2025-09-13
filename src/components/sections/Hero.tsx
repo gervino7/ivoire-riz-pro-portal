@@ -29,7 +29,7 @@ const Hero = () => {
             <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-montserrat font-black mb-4 sm:mb-6 leading-tight bg-gradient-vivid bg-clip-text text-transparent animate-pulse">
               IVOIRE RIZ
             </h1>
-            <div className="relative mb-4 sm:mb-6">
+            <div className="relative mb-4 sm:mb-6 mt-4 sm:mt-6">
               <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-montserrat font-bold text-white drop-shadow-lg">
                 RIZ LOCAL
               </p>
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
           
           {/* Subtitle */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto text-white/90 leading-relaxed px-2">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto text-white subpixel-antialiased leading-relaxed px-2 drop-shadow-md">
             Depuis 15 ans, nous cultivons et transformons le meilleur riz de Côte d'Ivoire 
             pour offrir à nos clients des produits de qualité premium.
           </p>
