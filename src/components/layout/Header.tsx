@@ -21,8 +21,8 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#accueil" className="flex items-center space-x-3 group cursor-pointer">
-            <div className="relative w-12 h-12 md:w-14 md:h-14 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+          <a href="#accueil" className="flex items-center space-x-2 sm:space-x-3 group cursor-pointer">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
               <img 
                 src={logoImage} 
                 alt="IVOIRE RIZ Logo" 
@@ -31,7 +31,7 @@ const Header = () => {
               <div className="absolute inset-0 bg-gradient-premium opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl"></div>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl md:text-2xl font-montserrat font-bold text-primary group-hover:text-primary-vivid transition-colors duration-300">
+              <span className="text-base sm:text-xl md:text-2xl font-montserrat font-bold text-primary group-hover:text-primary-vivid transition-colors duration-300">
                 IVOIRE RIZ
               </span>
               <span className="text-xs text-secondary font-medium tracking-wider hidden sm:block">
@@ -85,24 +85,24 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-border/50 bg-background/98 backdrop-blur-xl animate-slide-up">
-            <nav className="py-6 space-y-1 px-4">
+          <div className="lg:hidden border-t border-border/50 bg-background/98 backdrop-blur-xl animate-slide-up shadow-xl">
+            <nav className="py-4 space-y-1 px-2">
               {navigation.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="group relative block px-6 py-4 text-foreground hover:text-primary hover:bg-gradient-nature rounded-xl transition-all duration-300 font-medium"
+                  className="group relative block px-4 py-3 text-sm sm:text-base text-foreground hover:text-primary hover:bg-gradient-nature rounded-lg transition-all duration-300 font-medium animate-fade-in"
                   onClick={() => setIsMenuOpen(false)}
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <span className="relative z-10">{item.name}</span>
-                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl"></div>
-                  <div className="absolute left-4 top-1/2 w-0 h-0.5 bg-gradient-gold group-hover:w-8 transition-all duration-300 transform -translate-y-1/2"></div>
+                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-15 transition-opacity duration-300 rounded-lg"></div>
+                  <div className="absolute left-3 top-1/2 w-0 h-0.5 bg-gradient-gold group-hover:w-6 transition-all duration-300 transform -translate-y-1/2"></div>
                 </a>
               ))}
-              <div className="px-2 pt-6">
-                <a href="#produits" className="block">
-                  <Button className="w-full relative overflow-hidden bg-gradient-gold hover:bg-gradient-premium text-secondary-foreground font-semibold shadow-gold hover:shadow-vivid transition-all duration-500 group py-4 rounded-xl">
+              <div className="px-2 pt-4">
+                <a href="#produits" className="block" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full relative overflow-hidden bg-gradient-gold hover:bg-gradient-premium text-secondary-foreground font-semibold shadow-gold hover:shadow-vivid transition-all duration-500 group py-3 text-sm rounded-xl">
                     <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">Nos Produits</span>
                     <div className="absolute inset-0 bg-gradient-vivid opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </Button>

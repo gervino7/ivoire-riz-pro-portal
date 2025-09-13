@@ -26,41 +26,41 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Main Headline */}
           <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-montserrat font-black mb-6 leading-tight bg-gradient-vivid bg-clip-text text-transparent animate-pulse">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-montserrat font-black mb-4 sm:mb-6 leading-tight bg-gradient-vivid bg-clip-text text-transparent animate-pulse">
               IVOIRE RIZ
             </h1>
-            <div className="relative mb-6">
-              <p className="text-2xl md:text-4xl lg:text-5xl font-montserrat font-bold text-white drop-shadow-lg">
+            <div className="relative mb-4 sm:mb-6">
+              <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-montserrat font-bold text-white drop-shadow-lg">
                 RIZ LOCAL
               </p>
-              <p className="text-lg md:text-2xl lg:text-3xl font-montserrat font-semibold text-accent-light">
+              <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-montserrat font-semibold text-accent-light">
                 PRODUIT EN CÔTE D'IVOIRE
               </p>
-              <p className="text-xl md:text-3xl lg:text-4xl font-montserrat font-bold text-secondary animate-bounce">
+              <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-montserrat font-bold text-secondary animate-bounce">
                 QUALITÉ SUPÉRIEURE
               </p>
             </div>
           </div>
           
           {/* Subtitle */}
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white/90 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto text-white/90 leading-relaxed px-2">
             Depuis 15 ans, nous cultivons et transformons le meilleur riz de Côte d'Ivoire 
             pour offrir à nos clients des produits de qualité premium.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 px-2">
             <a href="#produits">
-              <Button size="lg" className="bg-gradient-gold hover:bg-secondary-dark text-secondary-foreground font-semibold text-lg px-8 py-4 shadow-gold">
+              <Button size="lg" className="w-full sm:w-auto bg-gradient-gold hover:bg-secondary-dark text-secondary-foreground font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-gold">
                 Découvrir nos produits
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </a>
             <a href="#apropos">
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 hover:border-white font-semibold text-lg px-8 py-4 backdrop-blur-sm"
+                className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 hover:border-white font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 backdrop-blur-sm"
               >
                 Notre histoire
               </Button>

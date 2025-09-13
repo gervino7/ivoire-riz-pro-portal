@@ -51,15 +51,15 @@ const Products = () => {
     <section id="produits" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-montserrat font-black text-primary mb-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-montserrat font-black text-primary mb-4 sm:mb-6">
             Les Différentes Qualités de Riz
           </h2>
-          <p className="text-2xl md:text-3xl font-montserrat font-bold text-accent mb-4">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-montserrat font-bold text-accent mb-3 sm:mb-4">
             À Votre Disposition
           </p>
-          <div className="w-32 h-2 bg-gradient-vivid mx-auto mb-8 rounded-full"></div>
-          <p className="text-xl text-primary-dark max-w-4xl mx-auto leading-relaxed font-semibold">
+          <div className="w-24 sm:w-32 h-2 bg-gradient-vivid mx-auto mb-6 sm:mb-8 rounded-full"></div>
+          <p className="text-base sm:text-lg md:text-xl text-primary-dark max-w-4xl mx-auto leading-relaxed font-semibold">
             Vous pensez au <span className="text-accent font-bold">vrai riz local</span>, 
             contactez <span className="text-primary font-black">IVOIRE RIZ</span> pour vous satisfaire
           </p>
