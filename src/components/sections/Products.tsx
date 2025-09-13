@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Package, Star, Award } from 'lucide-react';
 import riceProducts from '@/assets/rice-products.jpg';
+import { handleNavClick } from '@/utils/smoothScroll';
 
 const Products = () => {
   const products = [
@@ -124,7 +125,15 @@ const Products = () => {
                   </div>
                 </div>
 
-                <Button className="w-full bg-gradient-primary hover:bg-primary-dark text-white font-semibold">
+                <Button 
+                  className="w-full bg-gradient-primary hover:bg-primary-dark text-white font-semibold"
+                  onClick={() => {
+                    const phoneNumber = "2250506803113";
+                    const message = `Bonjour, je souhaite avoir un devis pour le produit ${product.name}. Pouvez-vous me donner plus d'informations ?`;
+                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+                  }}
+                >
                   Demander un devis
                 </Button>
               </CardContent>
@@ -142,7 +151,21 @@ const Products = () => {
             Nous proposons également des conditionnements sur mesure pour les professionnels, 
             les collectivités et les distributeurs. Contactez-nous pour discuter de vos besoins spécifiques.
           </p>
-          <Button size="lg" className="bg-gradient-gold hover:bg-secondary-dark text-secondary-foreground font-semibold">
+          <Button 
+            size="lg" 
+            className="bg-gradient-gold hover:bg-secondary-dark text-secondary-foreground font-semibold"
+            onClick={() => {
+              const element = document.getElementById('contact');
+              if (element) {
+                const headerHeight = 80;
+                const elementPosition = element.offsetTop - headerHeight;
+                window.scrollTo({
+                  top: elementPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }}
+          >
             Contactez notre équipe commerciale
           </Button>
         </div>

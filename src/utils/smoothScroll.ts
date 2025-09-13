@@ -14,7 +14,7 @@ export const smoothScrollToSection = (targetId: string) => {
   }
 };
 
-export const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+export const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
   e.preventDefault();
   
   if (href.startsWith('#')) {
