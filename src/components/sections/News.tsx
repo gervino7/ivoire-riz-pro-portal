@@ -4,8 +4,10 @@ import { Badge } from '@/components/ui/badge';
 import { Calendar, ArrowRight, Newspaper } from 'lucide-react';
 import { handleNavClick } from '@/utils/smoothScroll';
 import salonAgroImage from '@/assets/salon-agro-industrie.jpg';
+import { useState } from 'react';
 
 const News = () => {
+  const [showAllArticles, setShowAllArticles] = useState(false);
   const articles = [
     {
       id: 1,
@@ -126,7 +128,7 @@ const News = () => {
 
         {/* Other Articles */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {articles.slice(1).map((article) => (
+          {(showAllArticles ? articles.slice(1) : articles.slice(1, 4)).map((article) => (
             <Card key={article.id} className="overflow-hidden hover:shadow-subtle transition-all duration-300 group border-0 bg-white">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-4">
@@ -163,8 +165,12 @@ const News = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark text-white font-semibold" onClick={(e) => handleNavClick(e, '#actualites')}>
-            Voir toutes les actualités
+          <Button 
+            size="lg" 
+            className="bg-gradient-primary hover:bg-primary-dark text-white font-semibold" 
+            onClick={() => setShowAllArticles(!showAllArticles)}
+          >
+            {showAllArticles ? 'Voir moins d\'actualités' : 'Voir toutes les actualités'}
           </Button>
         </div>
       </div>
