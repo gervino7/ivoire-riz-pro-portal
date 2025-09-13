@@ -3,11 +3,21 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, ArrowRight, Newspaper } from 'lucide-react';
 import { handleNavClick } from '@/utils/smoothScroll';
+import salonAgroImage from '@/assets/salon-agro-industrie.jpg';
 
 const News = () => {
   const articles = [
     {
       id: 1,
+      title: "IVOIRE RIZ au Salon de l'Agro-Industrie 2024",
+      summary: "IVOIRE RIZ a participé avec succès au Salon de l'Agro-Industrie, présentant ses produits de qualité et renforçant ses partenariats stratégiques.",
+      date: "28 Novembre 2024",
+      category: "Événement",
+      readTime: "4 min",
+      image: salonAgroImage
+    },
+    {
+      id: 2,
       title: "IVOIRE RIZ participe au Salon International de l'Agriculture 2024",
       summary: "Notre entreprise sera présente au SARA 2024 pour présenter nos dernières innovations et rencontrer nos partenaires.",
       date: "15 Mars 2024",
@@ -15,7 +25,7 @@ const News = () => {
       readTime: "3 min"
     },
     {
-      id: 2,
+      id: 3,
       title: "Nouveau partenariat avec la Coopérative des Riziculteurs du Nord",
       summary: "Signature d'un accord stratégique pour soutenir 200 producteurs locaux et augmenter notre capacité de production.",
       date: "2 Mars 2024", 
@@ -23,7 +33,7 @@ const News = () => {
       readTime: "5 min"
     },
     {
-      id: 3,
+      id: 4,
       title: "Certification ISO 22000 obtenue pour nos unités de production",
       summary: "IVOIRE RIZ renforce son engagement qualité avec l'obtention de la certification internationale ISO 22000.",
       date: "18 Février 2024",
@@ -31,7 +41,7 @@ const News = () => {
       readTime: "4 min"
     },
     {
-      id: 4,
+      id: 5,
       title: "Lancement de notre nouvelle gamme de riz biologique",
       summary: "Découvrez nos nouveaux produits biologiques certifiés, cultivés selon les pratiques de l'agriculture durable.",
       date: "5 Février 2024",
@@ -94,8 +104,18 @@ const News = () => {
                   </Button>
                 </div>
               </div>
-              <div className="bg-primary/5 flex items-center justify-center p-8">
-                <Newspaper className="h-32 w-32 text-primary/20" />
+              <div className="overflow-hidden">
+                {articles[0].image ? (
+                  <img 
+                    src={articles[0].image} 
+                    alt={articles[0].title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="bg-primary/5 flex items-center justify-center p-8 h-full">
+                    <Newspaper className="h-32 w-32 text-primary/20" />
+                  </div>
+                )}
               </div>
             </div>
           </Card>
