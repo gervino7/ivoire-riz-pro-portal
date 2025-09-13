@@ -108,8 +108,8 @@ const News = () => {
               </div>
               <div className="relative overflow-hidden">
                 {articles[0].image ? (
-                  <div className="relative h-80 lg:h-full">
-                    <img 
+                  <div className="relative h-48 lg:h-64">
+                    <img
                       src={articles[0].image} 
                       alt={articles[0].title}
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
