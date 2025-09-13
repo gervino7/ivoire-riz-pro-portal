@@ -39,14 +39,6 @@ const News = () => {
       date: "18 Février 2024",
       category: "Qualité",
       readTime: "4 min"
-    },
-    {
-      id: 5,
-      title: "Lancement de notre nouvelle gamme de riz biologique",
-      summary: "Découvrez nos nouveaux produits biologiques certifiés, cultivés selon les pratiques de l'agriculture durable.",
-      date: "5 Février 2024",
-      category: "Produit",
-      readTime: "6 min"
     }
   ];
 
