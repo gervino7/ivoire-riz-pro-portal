@@ -78,7 +78,7 @@ const News = () => {
         {/* Featured Article */}
         <div className="mb-12">
           <Card className="overflow-hidden hover:shadow-premium transition-all duration-300 border-0 bg-white">
-            <div className="grid lg:grid-cols-2 gap-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
               <div className="bg-gradient-hero p-8 lg:p-12 text-white flex items-center">
                 <div>
                   <Badge className="bg-white/20 text-white mb-4 backdrop-blur-sm">
