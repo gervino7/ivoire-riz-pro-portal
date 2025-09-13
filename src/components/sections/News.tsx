@@ -9,7 +9,7 @@ const News = () => {
   const articles = [
     {
       id: 1,
-      title: "IVOIRE RIZ au Salon de l'Agro-Industrie 2024",
+      title: "IVOIRE RIZ au Salon de l'Agro-Industrie 2025",
       summary: "IVOIRE RIZ a participé avec succès au Salon de l'Agro-Industrie, présentant ses produits de qualité et renforçant ses partenariats stratégiques.",
       date: "Août 2025",
       category: "Événement",
@@ -39,6 +39,14 @@ const News = () => {
       date: "18 Février 2024",
       category: "Qualité",
       readTime: "4 min"
+    },
+    {
+      id: 5,
+      title: "Lancement de notre nouvelle gamme de riz biologique",
+      summary: "Découvrez nos nouveaux produits biologiques certifiés, cultivés selon les pratiques de l'agriculture durable.",
+      date: "5 Février 2024",
+      category: "Produit",
+      readTime: "6 min"
     }
   ];
 
