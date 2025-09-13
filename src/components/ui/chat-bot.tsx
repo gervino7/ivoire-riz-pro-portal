@@ -135,7 +135,7 @@ const ChatBot = () => {
   return (
     <>
       {/* Bouton flottant */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-24 right-6 z-50">
         {!isOpen && showWelcome && (
           <div className="mb-4 relative">
             <div className="bg-white rounded-lg shadow-xl p-4 max-w-xs animate-in slide-in-from-bottom-5 duration-500">
@@ -185,7 +185,7 @@ const ChatBot = () => {
 
       {/* Interface de chat */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-40 w-96 h-[500px] animate-in slide-in-from-bottom-10 fade-in duration-300"
+        <div className="fixed bottom-36 right-6 z-40 w-96 h-[500px] animate-in slide-in-from-bottom-10 fade-in duration-300"
              style={{ animationFillMode: 'forwards' }}>
           <Card className="h-full shadow-2xl border-0 overflow-hidden bg-white/95 backdrop-blur-sm">
             <CardHeader className="bg-gradient-to-r from-primary to-primary-dark text-white p-4">
