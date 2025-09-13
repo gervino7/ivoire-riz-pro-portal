@@ -122,10 +122,14 @@ const ChatBot = () => {
     }
   };
 
-  const openChat = () => {
-    setIsOpen(true);
-    setShowWelcome(false);
-    initializeChat();
+  const toggleChat = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+      setShowWelcome(false);
+      initializeChat();
+    }
   };
 
   return (
@@ -156,11 +160,21 @@ const ChatBot = () => {
         )}
         
         <Button
-          onClick={openChat}
-          className="relative h-14 w-14 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-primary to-primary-dark hover:scale-110 group"
+          onClick={toggleChat}
+          className={`relative h-14 w-14 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 group ${
+            isOpen 
+              ? 'bg-gradient-to-br from-red-500 to-red-600 hover:from-red-600 hover:to-red-700' 
+              : 'bg-gradient-to-br from-primary to-primary-dark'
+          }`}
         >
           <div className="absolute inset-0 bg-primary/20 rounded-full blur-md group-hover:animate-pulse"></div>
-          <MessageCircle className="h-6 w-6 relative z-10" />
+          <div className="relative z-10 transition-transform duration-300">
+            {isOpen ? (
+              <X className="h-6 w-6 rotate-0 transition-transform duration-300" />
+            ) : (
+              <MessageCircle className="h-6 w-6 rotate-0 transition-transform duration-300" />
+            )}
+          </div>
           {showWelcome && (
             <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-bounce">
               <div className="absolute inset-0 bg-red-500 rounded-full animate-ping"></div>
@@ -171,7 +185,8 @@ const ChatBot = () => {
 
       {/* Interface de chat */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-96 h-[500px] animate-in slide-in-from-bottom-10 duration-300">
+        <div className="fixed bottom-24 right-6 z-40 w-96 h-[500px] animate-in slide-in-from-bottom-10 fade-in duration-300"
+             style={{ animationFillMode: 'forwards' }}>
           <Card className="h-full shadow-2xl border-0 overflow-hidden bg-white/95 backdrop-blur-sm">
             <CardHeader className="bg-gradient-to-r from-primary to-primary-dark text-white p-4">
               <div className="flex items-center justify-between">
