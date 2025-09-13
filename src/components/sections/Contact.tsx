@@ -61,7 +61,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["contact@ivoireriz.ci", "commercial@ivoireriz.ci"],
+      details: ["nbasile202@gmail.com", "inddger7@gmail.com"],
       color: "text-accent"
     },
     {

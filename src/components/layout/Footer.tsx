@@ -15,7 +15,7 @@ const Footer = () => {
       { name: "Riz blanc premium", href: "#produits" },
       { name: "Riz étuvé", href: "#produits" },
       { name: "Riz parfumé", href: "#produits" },
-      { name: "Riz brisé", href: "#produits" }
+      // { name: "Riz brisé", href: "#produits" }
     ],
     services: [
       { name: "Partenariat distributeur", href: "#contact" },
