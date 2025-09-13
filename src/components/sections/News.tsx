@@ -11,7 +11,7 @@ const News = () => {
       id: 1,
       title: "IVOIRE RIZ au Salon de l'Agro-Industrie 2024",
       summary: "IVOIRE RIZ a participé avec succès au Salon de l'Agro-Industrie, présentant ses produits de qualité et renforçant ses partenariats stratégiques.",
-      date: "28 Novembre 2024",
+      date: "Août 2025",
       category: "Événement",
       readTime: "4 min",
       image: salonAgroImage
